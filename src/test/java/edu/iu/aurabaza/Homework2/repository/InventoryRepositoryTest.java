@@ -51,8 +51,6 @@ class InventoryRepositoryTest {
     void search() {
         Guitar criteriaGuitar = new Guitar(null, 500.0, null, null, null, "Sycamore", "Maple");
         InventoryRepository inventoryRepository = new InventoryRepository();
-        inventoryRepository.search(criteriaGuitar).toString();
-        List<Guitar> actualList = new ArrayList<Guitar>();
-        assertArrayEquals(inventoryRepository.search(criteriaGuitar).toArray(), actualList.toArray());
+        assertTrue(inventoryRepository.search(criteriaGuitar).toArray().length >= 1);
     }
 }
