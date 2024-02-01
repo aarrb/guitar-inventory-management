@@ -1,3 +1,9 @@
 
 123456, 1500.0, Fender, Stratocaster, Electric, Alder, Maple
-11, 11.0, Gibson, Les Paul, Electric, Indian Rosewood, Cedar
+11, 11.0, Gibson, Les Paul, Electric, Indian Rosewood, Cedar19111908, 500.0, Fender, Model1, Electric, Maple, Alder
+19201906, 750.0, Martin, Mizuramu, Acoustic, Mahogany, Sitka
+19111908, 500.0, Fender, Model1, Electric, Maple, Alder
+19111908, 500.0, Fender, Model1, Electric, Maple, Alder
+19111908, 500.0, Fender, Model1, Electric, Maple, Alder
+19201906, 750.0, Martin, Mizuramu, Acoustic, Mahogany, Sitka
+19111908, 500.0, Fender, Model1, Electric, Maple, Alder
