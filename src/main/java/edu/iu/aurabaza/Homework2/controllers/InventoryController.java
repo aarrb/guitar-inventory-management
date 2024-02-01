@@ -1,7 +1,11 @@
 package edu.iu.aurabaza.Homework2.controllers;
 import edu.iu.aurabaza.Homework2.model.Guitar;
 import edu.iu.aurabaza.Homework2.repository.InventoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
+
+import edu.iu.aurabaza.Homework2.model.Builder;
+import edu.iu.aurabaza.Homework2.model.Type;
+import edu.iu.aurabaza.Homework2.model.Wood;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,11 +25,11 @@ public class InventoryController {
     @GetMapping("/search")
     public List<Guitar> searchGuitars(@RequestParam(required = false) String serialNumber,
                                       @RequestParam(required = false) Double price,
-                                      @RequestParam(required = false) String builder,
+                                      @RequestParam(required = false) Builder builder,
                                       @RequestParam(required = false) String model,
-                                      @RequestParam(required = false) String type,
-                                      @RequestParam(required = false) String backWood,
-                                      @RequestParam(required = false) String topWood) {
+                                      @RequestParam(required = false) Type type,
+                                      @RequestParam(required = false) Wood backWood,
+                                      @RequestParam(required = false) Wood topWood) {
         // Handle null value for price
         Double priceValue = (price != null) ? price : 0.0;
 

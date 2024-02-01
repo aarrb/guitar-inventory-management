@@ -1,6 +1,10 @@
 package edu.iu.aurabaza.Homework2.repository;
 
 import edu.iu.aurabaza.Homework2.model.Guitar;
+import edu.iu.aurabaza.Homework2.model.Builder;
+import edu.iu.aurabaza.Homework2.model.Type;
+import edu.iu.aurabaza.Homework2.model.Wood;
+
 import org.springframework.stereotype.Repository;
 
 import java.io.*;
@@ -13,8 +17,8 @@ public class InventoryRepository {
     private static final String DATABASE_FILE = "guitars_database.txt";
     private static List<Guitar> guitarList = new ArrayList<>();
 
-    public static void addGuitar(String serialNumber, double price, String builder,
-                                 String model, String type, String backWood, String topWood) {
+    public static void addGuitar(String serialNumber, double price, Builder builder,
+                                 String model, Type type, Wood backWood, Wood topWood) {
         Guitar guitar = new Guitar(serialNumber, price, builder, model, type, backWood, topWood);
         guitarList.add(guitar);
         System.out.println("Guitar added to list");
@@ -58,29 +62,21 @@ public class InventoryRepository {
         if (criteria.getPrice() != 0 && guitar.getPrice() != criteria.getPrice()) {
             return false;
         }
-        if (criteria.getBuilder() != null && !guitar.getBuilder().equalsIgnoreCase(criteria.getBuilder())) {
+        if (criteria.getBuilder() != null && guitar.getBuilder() != criteria.getBuilder()) {
             return false;
         }
         if (criteria.getModel() != null && !guitar.getModel().equalsIgnoreCase(criteria.getModel())) {
             return false;
         }
-        if (criteria.getType() != null && !guitar.getType().equalsIgnoreCase(criteria.getType())) {
+        if (criteria.getType() != null && guitar.getType() != criteria.getType()) {
             return false;
         }
-        if (criteria.getBackWood() != null && !guitar.getBackWood().equalsIgnoreCase(criteria.getBackWood())) {
+        if (criteria.getBackWood() != null && guitar.getBackWood() != criteria.getBackWood()) {
             return false;
         }
-        if (criteria.getTopWood() != null && !guitar.getTopWood().equalsIgnoreCase(criteria.getTopWood())) {
+        if (criteria.getTopWood() != null && guitar.getTopWood() != criteria.getTopWood()) {
             return false;
         }
         return true; // Guitar matches all provided criteria
-    }
-
-
-    private Guitar stringToGuitar(String str) {
-        // Convert a String representation back to a Guitar object
-        String[] parts = str.split(",");
-        return new Guitar(parts[0], Double.parseDouble(parts[1]), parts[2],
-                parts[3], parts[4], parts[5], parts[6]);
     }
 }

@@ -1,11 +1,15 @@
 package edu.iu.aurabaza.Homework2.model;
 
 public class Guitar {
-    //local variables
-    String serialNumber, builder, model, type, backWood, topWood;
-    double price;
+    // Local variables
+    private String serialNumber, model;
+    private double price;
+    private Builder builder;
+    private Type type;
+    private Wood backWood, topWood;
 
-    public Guitar(String serialNumber, double price, String builder, String model, String type, String backWood, String topWood) {
+    // Constructor
+    public Guitar(String serialNumber, double price, Builder builder, String model, Type type, Wood backWood, Wood topWood) {
         this.serialNumber = serialNumber;
         this.price = price;
         this.builder = builder;
@@ -14,30 +18,62 @@ public class Guitar {
         this.backWood = backWood;
         this.topWood = topWood;
     }
-    //get functions
-    public String getSerialNumber(){
-        return this.serialNumber;
-    }
-    public double getPrice(){
-        return this.price;
-    }
-    public void setPrice(float p){
-        this.price = p;
-    }
-    public String getBuilder(){
-        return this.builder;
-    }
-    public String getModel(){
-        return this.model;
-    }
-    public String getType(){
-        return this.type;
-    }
-    public String getBackWood(){
-        return this.backWood;
-    }
-    public String getTopWood(){
-        return this.topWood;
+
+    // Getters
+    public String getSerialNumber() {
+        return serialNumber;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public Builder getBuilder() {
+        return builder;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public Wood getBackWood() {
+        return backWood;
+    }
+
+    public Wood getTopWood() {
+        return topWood;
+    }
+
+    // Setters
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setBuilder(Builder builder) {
+        this.builder = builder;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public void setBackWood(Wood backWood) {
+        this.backWood = backWood;
+    }
+
+    public void setTopWood(Wood topWood) {
+        this.topWood = topWood;
+    }
 }
