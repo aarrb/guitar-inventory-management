@@ -2,7 +2,6 @@ package edu.iu.aurabaza.Homework2.controllers;
 import edu.iu.aurabaza.Homework2.model.Guitar;
 import edu.iu.aurabaza.Homework2.repository.InventoryRepository;
 
-
 import edu.iu.aurabaza.Homework2.model.Builder;
 import edu.iu.aurabaza.Homework2.model.Type;
 import edu.iu.aurabaza.Homework2.model.Wood;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public class InventoryController {
 
     private final InventoryRepository inventoryRepository;
@@ -36,7 +36,7 @@ public class InventoryController {
         Guitar searchCriteria = new Guitar(serialNumber, priceValue, builder, model, type, backWood, topWood);
         return inventoryRepository.search(searchCriteria);
     }
-
+//    @CrossOrigin(origins = "*")
     @PostMapping("/add")
     public Guitar addGuitar(@RequestBody Guitar guitar) {
         inventoryRepository.addGuitar(guitar.getSerialNumber(), guitar.getPrice(), guitar.getBuilder(),
