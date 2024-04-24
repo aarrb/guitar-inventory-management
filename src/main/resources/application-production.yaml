@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres://guitar_lnrd_user:hAy9DP3YPuUxowPTmd96iwGJ9ZVA11on@dpg-coknioa0si5c73du051g-a.ohio-postgres.render.com/guitar_lnrd
+    username: guitar_lnrd_user
+    password: hAy9DP3YPuUxowPTmd96iwGJ9ZVA11on
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  sql:
+    init:
+      mode: always

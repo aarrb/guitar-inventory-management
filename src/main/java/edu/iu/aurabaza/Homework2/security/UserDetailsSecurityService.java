@@ -1,6 +1,7 @@
 package edu.iu.aurabaza.Homework2.security;
 
 import edu.iu.aurabaza.Homework2.model.Customer;
+import edu.iu.aurabaza.Homework2.repository.CustomerFileRepository;
 import edu.iu.aurabaza.Homework2.repository.CustomerRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,7 +28,7 @@ public class UserDetailsSecurityService implements UserDetailsService {
             }
             return User
                     .withUsername(username)
-                    .password(customer.password())
+                    .password(customer.getPassword())
                     .build();
         } catch (Exception e) {
             throw new RuntimeException(e);
