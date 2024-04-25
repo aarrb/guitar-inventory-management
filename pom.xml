@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.iu.aurabaza</groupId>
-	<artifactId>primes-service</artifactId>
+	<artifactId>guitars-inventory-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>primes-service</name>
+	<name>guitars-inventory-service</name>
 	<description>Testing for api </description>
 	<properties>
 		<java.version>17</java.version>
