@@ -1,1 +1,1 @@
-CREATE SCHEMA IF NOT EXISTS guitar;
+CREATE SCHEMA IF NOT EXISTS guitars_inventory;

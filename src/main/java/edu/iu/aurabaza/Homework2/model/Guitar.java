@@ -1,12 +1,23 @@
 package edu.iu.aurabaza.Homework2.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(schema = "guitars_inventory", name = "guitars")
 public class Guitar {
     // Local variables
-    private String serialNumber, model;
+    @Id
+    private String serialNumber;
+    private String model;
     private double price;
     private Builder builder;
     private Type type;
     private Wood backWood, topWood;
+
+    public Guitar() {
+    }
 
     // Constructor
     public Guitar(String serialNumber, double price, Builder builder, String model, Type type, Wood backWood, Wood topWood) {
